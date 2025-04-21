@@ -12,7 +12,7 @@ header {
 }
 .flex-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .flex-container ul {
@@ -86,7 +86,9 @@ header {
 .giver-left-wrapper {
     width: 70%;
 }
-.giver-left-up {
+.giver-left-up, .giver-left-down{
+    border:1px solid #ddd;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     gap: 30px;
@@ -96,6 +98,7 @@ header {
 
 .together-list {
     text-overflow: ellipsis;
+    overflow: hidden;
 }
 .together-list ul{
     display: flex;
@@ -108,7 +111,39 @@ header {
     align-items: center;
 }
 .together-title span {
+    white-space: nowrap;
     color: #46caeb;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 6s linear infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-326px); /* move by 3 items width */
+  }
+}
+
+.auto-flex {
+    display: flex;
+    justify-content: space-between;
+}
+.welfare-ask {
+    background-color: #806d57;
+    padding: 10px;
+    border-radius: 10px;
+}
+.welfare-ask ul {
+    display: flex;
+    flex-direction: column;
+}
+.welfare-ask ul li{
+    text-align: center;
 }
 
 /* ✅ 오늘의 일정 끝 */
