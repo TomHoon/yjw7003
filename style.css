@@ -2,20 +2,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@300;400;500&display=swap');
 
 header {
-    padding: 10px;
+    position: fixed;
     border-bottom: 1px solid #ddd;
+    background: #fff;
+    width: 100%;
 }
 
 .logo {
     width: 285px;
-    height: 51px;
+    height: 45px;
 }
 
+.flex-container a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
 .flex-container {
     display: flex;
     justify-content: space-between;
 }
 
+.flex-container ul li{
+    font-size: 18px;
+    font-weight: 500;
+}
 .flex-container ul {
     display: flex;
     justify-content: center;
@@ -37,6 +49,9 @@ header {
 .mainCarousel {
     padding: 15px 0;
     background-color: #f7f7f2;
+}
+.mainCarousel img{ 
+    width: 1200px;
 }
 
 /* ✅ 캐러우절 끝 */
@@ -84,21 +99,17 @@ header {
 
 
 .main-giver {
-    padding-top: 30px;
+    background-color: #f7f7f2;
+    padding: 40px 0;
 }
 
 .giver-left-wrapper {
     width: 70%;
 }
-<<<<<<< Updated upstream
-.giver-left-up, .giver-left-down{
-    border:1px solid #ddd;
-=======
 
 .giver-left-up,
 .giver-left-down {
     border: 1px solid #ddd;
->>>>>>> Stashed changes
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -129,20 +140,6 @@ header {
     color: #46caeb;
 }
 
-<<<<<<< Updated upstream
-.carousel-track {
-  display: flex;
-  width: max-content;
-  animation: scroll 6s linear infinite;
-}
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-326px); /* move by 3 items width */
-  }
-=======
 .carousel-track li {
     color: #8d8d8d;
 }
@@ -162,37 +159,21 @@ header {
         transform: translateX(-326px);
         /* move by 3 items width */
     }
->>>>>>> Stashed changes
 }
 
 .auto-flex {
     display: flex;
     justify-content: space-between;
 }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 .welfare-ask {
     background-color: #806d57;
     padding: 10px;
     border-radius: 10px;
 }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 .welfare-ask ul {
     display: flex;
     flex-direction: column;
 }
-<<<<<<< Updated upstream
-.welfare-ask ul li{
-    text-align: center;
-}
-
-/* ✅ 오늘의 일정 끝 */
-=======
 
 .welfare-ask ul li {
     text-align: center;
@@ -227,8 +208,8 @@ footer {
 }
 
 .footer-left img {
-    width: 285px;
-    height: 50px;
+    width: 500px;
+    height: 120px;
     object-fit: contain;
 }
 
@@ -239,4 +220,3 @@ footer {
     font-size: 15px;
     color: #6d6d6d;
 }
->>>>>>> Stashed changes
