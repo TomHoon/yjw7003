@@ -10,6 +10,7 @@ header {
     width: 285px;
     height: 51px;
 }
+
 .flex-container {
     display: flex;
     justify-content: space-between;
@@ -26,9 +27,9 @@ header {
     display: flex;
 }
 
-.userBtns button{
+.userBtns button {
     background: none;
-    border:none;
+    border: none;
 }
 
 /* ✅ 헤더 끝 */
@@ -45,7 +46,7 @@ header {
     background-color: #f7f7f2;
 }
 
-.mainNavi ul{
+.mainNavi ul {
     background-color: #fff;
     display: flex;
     flex-direction: row;
@@ -53,11 +54,13 @@ header {
     border: 1px solid #ddd;
     border-radius: 10px;
 }
+
 .mainNavi ul li {
     width: 100%;
 }
-.mainNavi ul li a{
-    padding: 30px 0; 
+
+.mainNavi ul li a {
+    padding: 30px 0;
     text-decoration: none;
     color: black;
     display: flex;
@@ -69,9 +72,10 @@ header {
     border-right: 1px solid #ddd;
 }
 
-.mainNavi ul li{
+.mainNavi ul li {
     border-right: 1px slid #ddd;
 }
+
 .size159 {
     font-size: 158px;
 }
@@ -86,8 +90,15 @@ header {
 .giver-left-wrapper {
     width: 70%;
 }
+<<<<<<< Updated upstream
 .giver-left-up, .giver-left-down{
     border:1px solid #ddd;
+=======
+
+.giver-left-up,
+.giver-left-down {
+    border: 1px solid #ddd;
+>>>>>>> Stashed changes
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -100,21 +111,25 @@ header {
     text-overflow: ellipsis;
     overflow: hidden;
 }
-.together-list ul{
+
+.together-list ul {
     display: flex;
     flex-direction: row;
     gap: 10px;
 }
+
 .together-title {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .together-title span {
     white-space: nowrap;
     color: #46caeb;
 }
 
+<<<<<<< Updated upstream
 .carousel-track {
   display: flex;
   width: max-content;
@@ -127,23 +142,101 @@ header {
   100% {
     transform: translateX(-326px); /* move by 3 items width */
   }
+=======
+.carousel-track li {
+    color: #8d8d8d;
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 6s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-326px);
+        /* move by 3 items width */
+    }
+>>>>>>> Stashed changes
 }
 
 .auto-flex {
     display: flex;
     justify-content: space-between;
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 .welfare-ask {
     background-color: #806d57;
     padding: 10px;
     border-radius: 10px;
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 .welfare-ask ul {
     display: flex;
     flex-direction: column;
 }
+<<<<<<< Updated upstream
 .welfare-ask ul li{
     text-align: center;
 }
 
 /* ✅ 오늘의 일정 끝 */
+=======
+
+.welfare-ask ul li {
+    text-align: center;
+}
+
+/* ✅ 오늘의 일정 끝 */
+
+
+.terms-container {
+    margin-top: 100px;
+    background-color: #ccc;
+    padding: 25px 0;
+}
+
+.terms-container .auto ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+/* ✅ 푸터 */
+
+footer {
+    padding: 25px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.footer-left img {
+    width: 285px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-right address {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-size: 15px;
+    color: #6d6d6d;
+}
+>>>>>>> Stashed changes
