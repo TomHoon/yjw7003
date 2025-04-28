@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./favicon/favicon.ico" type="image/x-icon" />
+    <title>양주시여성장애인어울림센터</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="auto">
+        <div class="flex-container">
+          <a href="/">
+            <img src="./icon.png" alt="" class="logo" />
+          </a>
+          <ul>
+            <li>사업안내</li>
+            <li>이용안내</li>
+            <li onclick="location.href = './giver.html'">후원 및 기부</li>
+            <li>교육</li>
+            <li>복지관 소개</li>
+          </ul>
+          <div class="userBtns">
+            <button>로그인</button>
+            <button>회원가입</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="sub-banner">
+      <img src="./subbanner.jpg" />
+      <span>후원 및 기부</span>
+    </div>
+
+    <div class="giver-content">
+      <div class="auto">
+        <!-- <div class="left-content">
+        <div class="left-rec-topic">
+          <ul>
+            <li>양주시여성장애인어울림센터</li>
+            <li>
+              <h3>후원 및 기부</h3>
+            </li>
+          </ul>
+        </div>
+      </div> -->
+
+        <div class="right-content">
+          <div class="right-top">
+            <h3>공지사항</h3>
+          </div>
+
+          <article class="right-bottom">
+            <div class="info-container">
+              <div class="title">
+                <h3>2024년 기부금 수입실적명세서</h3>
+              </div>
+              <div class="sub-info">
+                <dl>
+                  <dt>작성자</dt>
+                  <dd>관리자</dd>
+
+                  <dt>등록일</dt>
+                  <dd>2025.04.28</dd>
+                </dl>
+              </div>
+            </div>
+
+            <div class="info-content-container">
+              <div class="auto">
+
+                <div class="info-content">
+
+                  <div class="giver-list-table">
+                    <div class="giver-list-title">
+                      <ul>
+                        <li>순번</li>
+                        <li>월별</li>
+                        <li>수입내역</li>
+                        <li>금액(원)</li>
+                        <li>후원처(사업자 및 개인명)</li>
+                      </ul>
+                    </div>
+
+
+                    <!-- 📌 스크립트로 들어갈 자리 -->
+                  </div>
+
+                </div>
+
+
+                <div class="info-content-footer">
+                  <ul>
+                    <li>첨부파일</li>
+                    <li>
+                      <a
+                        href="./기부금모금액수입명세서-공지용.pdf"
+                        download="기부금모금액수입명세서-공지용.pdf"
+                        >기부금모금액수입명세서-공지용.pdf</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+
+
+              </div>
+
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="terms-container">
+      <div class="auto">
+        <ul>
+          <li>개인정보처리방침</li>
+          <li>이메일무단수집거부</li>
+          <li>오시는길</li>
+          <li>사이트맵</li>
+        </ul>
+      </div>
+    </div>
+    <!-- ✅ 개인정보처리방침 끝 -->
+
+    <footer>
+      <div class="auto">
+        <div class="footer-container">
+          <div class="footer-left">
+            <img src="icon.png" alt="" />
+          </div>
+
+          <div class="footer-right">
+            <address>
+              <p>
+                양주시여성장애인어울림센터 주소: 경기도 양주시 고읍남로 191번길
+                70-5, 102호
+              </p>
+              <p>
+                전화번호: 031-2222-2222 팩스: 031-2222-2222 이메일:
+                gnsdl@gmail.com
+              </p>
+              <p>
+                Copyright ⓒ 양주시여성장애인어울림센터. All Rights Reserved.
+              </p>
+            </address>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ✅ 푸터 끝-->
+  </body>
+</html>
+
+
+<script>
+  const table = document.querySelector('.giver-list-table');
+  let jan기부금리스트 = [
+    {
+      날짜: '1월 11일',
+      항목: '비지정기부금',
+      금액: '100,000',
+      이름: '조00'
+    },
+    {
+      날짜: '1월 11일',
+      항목: '비지정기부금',
+      금액: '100,000',
+      이름: '이00'
+    },
+    {
+      날짜: '1월 11일',
+      항목: '비지정기부금',
+      금액: '50,000',
+      이름: '이00'
+    },
+    {
+      날짜: '1월 12일',
+      항목: '비지정기부금',
+      금액: '10,000',
+      이름: '오00'
+    },
+    {
+      날짜: '1월 25일',
+      항목: '비지정기부금',
+      금액: '5,000',
+      이름: '오00'
+    },
+    {
+      날짜: '1월 30일',
+      항목: '비지정기부금',
+      금액: '200,000',
+      이름: '남00'
+    },
+    {
+      날짜: '1월 30일',
+      항목: '비지정기부금',
+      금액: '100,000',
+      이름: '조00'
+    },
+    {
+      날짜: '1월 30일',
+      항목: '비지정기부금',
+      금액: '100,000',
+      이름: '이00'
+    },
+    {
+      날짜: '1월 30일',
+      항목: '비지정기부금',
+      금액: '100,000',
+      이름: '김00'
+    },
+    {
+      날짜: '1월 30일',
+      항목: '비지정기부금',
+      금액: '300,000',
+      이름: '남00'
+    }
+  ]
+  jan기부금리스트.forEach((item, idx) => {
+    table.innerHTML += `
+      <div class="giver-list-item">
+        <ul>
+          <li>${idx + 1}</li>
+          <li>${item.날짜}</li>
+          <li>${item.항목}</li>
+          <li>${item.금액}</li>
+          <li>${item.이름}</li>
+        </ul>
+      </div>
+    `
+  })
+</script>
