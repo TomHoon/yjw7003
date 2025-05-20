@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@300;400;500&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+  cursor: pointer;
+}
+.auto {
+  width: 1200px;
+  margin: 0 auto;
+}
+button {
+  cursor: pointer;
+}
+
+header {
+    position: fixed;
+    z-index:99999999;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    width: 100%;
+    top:0;
+}
+a {
+    text-decoration: none;
+    color: inherit; /* optional, keeps link color same as text */
+  }
+.logo {
+    width: 285px;
+    height: 45px;
+}
+
+.flex-container a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-container ul li{
+    font-size: 18px;
+    font-weight: 500;
+}
+.flex-container ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.userBtns {
+    display: flex;
+}
+
+.userBtns button {
+    background: none;
+    border: none;
+}
+
+/* ✅ 헤더 끝 */
+
+.mainCarousel {
+    padding: 15px 0;
+    background-color: #f7f7f2;
+}
+.mainCarousel img{ 
+    width: 1200px;
+}
+
+/* ✅ 캐러우절 끝 */
+
+.mainNavi {
+    padding-top: 30px;
+    background-color: #f7f7f2;
+}
+
+.mainNavi ul {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.mainNavi ul li {
+    width: 100%;
+}
+
+.mainNavi ul li a {
+    padding: 30px 0;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    border-right: 1px solid #ddd;
+}
+
+.mainNavi ul li {
+    border-right: 1px slid #ddd;
+}
+
+.size159 {
+    font-size: 158px;
+}
+
+/* ✅ 네비버튼 끝 */
+
+
+.main-giver {
+    background-color: #f7f7f2;
+    padding: 40px 0;
+}
+
+.giver-left-wrapper {
+    width: 70%;
+}
+
+.giver-left-up,
+.giver-left-down {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #f8f8f8;
+    padding: 10px;
+}
+
+.together-list {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.together-list ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.together-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.together-title span {
+    white-space: nowrap;
+    color: #46caeb;
+}
+
+.carousel-track li {
+    color: #8d8d8d;
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 6s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-326px);
+        /* move by 3 items width */
+    }
+}
+
+.auto-flex {
+    display: flex;
+    justify-content: space-between;
+}
+.welfare-ask {
+    background-color: #806d57;
+    padding: 10px;
+    border-radius: 10px;
+}
+.welfare-ask ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.welfare-ask ul li {
+    text-align: center;
+}
+
+/* ✅ 오늘의 일정 끝 */
+
+
+.terms-container {
+    margin-top: 100px;
+    background-color: #ccc;
+    padding: 25px 0;
+}
+
+.terms-container .auto ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+
+
+/** giver */
+.sub-banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub-banner span{ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 35px;
+    font-weight: 700;
+    color: #fff;
+    border-bottom: 5px solid #fff;
+    transform: translate(-50%, -50%);
+}
+.sub-banner img{
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    height: 350px;
+    object-fit: cover;
+    object-position: 30% 70%;
+}
+
+.giver-content {
+    padding: 10px;
+}
+
+.right-top h3{
+    font-size: 38px;
+    font-weight: 500;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+article {
+    border-top: 2px solid #46a51d
+}
+.right-bottom-title ul{
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+.right-bottom-title ul li{
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px;
+}
+
+.right-bottom-item {
+    border-bottom: 1px solid #ddd;
+}
+.right-bottom-item ul{
+    display: flex;
+}
+.right-bottom-item ul li{
+    text-align: center;
+    padding: 10px;
+}
+.right-bottom-item ul li:nth-child(1){
+    width: 20%;
+}
+.right-bottom-item ul li:nth-child(2){
+    text-align: left !important;
+    width: 50%;
+    color: #555;
+    font-weight: 500;
+}
+.right-bottom-item ul li:nth-child(3){
+    width: 20%;
+}
+
+
+
+
+/** giver-detail */
+.info-container {
+    border-bottom: 1px solid #ddd;
+}
+.info-container h3{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.sub-info dl {
+    display: flex;
+}
+.sub-info dt {
+    font-weight: 700;
+}
+.sub-info dd{
+    color: #888;
+    margin-right: 50px;
+}
+
+.info-content-container .info-content{
+    min-height: 500px;
+}
+.info-content-footer {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.info-content-footer ul {
+    display: flex;
+    gap: 50px;
+}
+
+
+/**✅ 글상세 테이블 */
+
+.giver-list-table {
+    margin-top: 30px;
+    border-bottom:1px solid #329141;
+}
+.giver-list-title {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #329141;
+    color: white;
+}
+.giver-list-title ul li, .giver-list-item ul li{
+    width: 20%;
+}
+.giver-list-item ul{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.giver-list-title ul, .giver-list-item ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    text-align: center;
+}

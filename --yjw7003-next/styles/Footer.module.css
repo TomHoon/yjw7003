@@ -1,0 +1,25 @@
+/* ✅ 푸터 */
+
+.footer {
+  padding: 25px 0;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.footerLeft img {
+  width: 500px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.footerRight address {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-size: 15px;
+  color: #6d6d6d;
+}
