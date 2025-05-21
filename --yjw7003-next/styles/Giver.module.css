@@ -1,0 +1,14 @@
+.writeBtnWrapper {
+  display: flex;
+  justify-content: right;
+  padding: 80px 80px 0 0 ;
+}
+
+.writeBtn {
+  width: 150px;
+  height: 70px;
+  border:none;
+  background: #386c48;
+  border-radius: 10px;
+  color: white;
+}

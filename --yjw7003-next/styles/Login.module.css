@@ -1,0 +1,84 @@
+/* ✅ 로그인 */
+
+.loginForm dt{
+  font-size: 40px;
+  font-weight: 700;
+}
+.loginForm {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+
+.loginForm dl {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.loginContentsWrapper {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.loginContentsWrapper dl{
+
+  text-align: center;
+}
+
+.flexContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  gap: 15px;
+}
+
+.flexContainer .flexItem{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.flexContainer .flexItem input{
+  width: 375px;
+  height: 50px;
+  border: 1px solid #d9d9d9;
+  padding: 10px;
+}
+
+.flexContainer .flexItem button{
+  width: 180px;
+  height: 150px;
+  background-color: #46a51d;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+}
+
+.joinBtnsWrapper {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.joinBtnsWrapper .joinBtnsItem{
+  display: flex;
+  justify-content: space-between;
+}
+.joinBtnsWrapper .joinBtnsItem span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.joinBtnsWrapper .joinBtnsItem button{
+  width: 150px;
+  height: 60px;
+  background: #acabab;
+  border: none;
+}
