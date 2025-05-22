@@ -7,6 +7,8 @@ import Header from '@/components/Header';
 import Terms from '@/components/Terms';
 import Footer from '@/components/Footer';
 
+import { AuthProvider } from './auth-context';
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -33,10 +35,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header />
-        <main>{children}</main>
-        <Terms />
-        <Footer />
+        <AuthProvider>
+          <Header />
+          <main>{children}</main>
+          <Terms />
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );

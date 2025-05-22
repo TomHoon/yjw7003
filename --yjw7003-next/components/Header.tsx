@@ -1,7 +1,14 @@
+'use client';
+
+import { useAuth } from '@/app/auth-context';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Header() {
+  const { isLoggedIn, login, logout } = useAuth();
+
+  console.log('isLoggedIn >>> ', isLoggedIn);
+
   return (
     <header>
       <div className="auto">
@@ -19,8 +26,10 @@ export default function Header() {
             <li>복지관 소개</li>
           </ul>
           <div className="userBtns">
-            <button>로그인</button>
-            <button>회원가입</button>
+            <Link href="/login">
+              <button>{isLoggedIn ? '로그아웃' : '로그인'}</button>
+            </Link>
+            {!isLoggedIn && <button>회원가입</button>}
           </div>
         </div>
       </div>
