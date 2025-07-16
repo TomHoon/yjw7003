@@ -20,7 +20,7 @@ export default function Giver() {
     const getBoardList = async () => {
       const currentPage = searchParams?.get("page") || 1;
       const res = await fetch(
-        `https://tomhoon.my/api/v1/board/list?page=${currentPage}`
+        `${process.env.NEXT_PUBLIC_API_URL}/api/v1/board/list?page=${currentPage}`
       );
       const response = await res.json();
 
@@ -71,7 +71,7 @@ export default function Giver() {
         <div className="auto">
           <div className={styles.content}>
             <div className="right-top">
-              <h3>공지사항</h3>
+              <h3 className={styles.title}>후원 및 기부</h3>
             </div>
 
             <article className="right-bottom">
@@ -106,17 +106,21 @@ export default function Giver() {
               <ul>
                 {groupBtn?.hasPreviousGroup && <li onClick={goPrev}>&lt;</li>}
                 {pages.map((item: any, idx: number) => {
-                  return <li onClick={() => goList(item)}>{item}</li>;
+                  return (
+                    <li key={idx} onClick={() => goList(item)}>
+                      {item}
+                    </li>
+                  );
                 })}
                 {groupBtn?.hasNextGroup && <li onClick={goNext}>&gt;</li>}
               </ul>
-            </div>
 
-            {isLogged && (
-              <Link href={`/write`}>
-                <button className={styles.writeBtn}>글쓰기</button>
-              </Link>
-            )}
+              {isLogged && (
+                <Link href={`/write`}>
+                  <button className={styles.writeBtn}>글쓰기</button>
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </div>

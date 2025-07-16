@@ -27,16 +27,19 @@ export default function Write() {
     const formData: any = new FormData();
     formData.append("file", e.target?.files?.[0]);
 
-    const res = await fetch("https://tomhoon.my/api/v1/board/uploadImage", {
-      method: "POST",
-      body: formData,
-    });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/v1/board/uploadImage`,
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
 
     const response = await res.json();
 
     if (editorRef.current) {
       const img = document.createElement("img");
-      img.src = "https://tomhoon.my/" + response?.data?.imageURL;
+      img.src = `${process.env.NEXT_PUBLIC_API_URL}/${response?.data?.imageURL}`;
       img.classList.add("editorImage");
 
       editorRef.current.appendChild(img);
@@ -72,12 +75,17 @@ export default function Write() {
       formData.append("attachList", item);
     });
 
-    const res = await fetch("https://tomhoon.my/api/v1/board/regist", {
-      method: "POST",
-      body: formData,
-    });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/v1/board/regist`,
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
 
     const response = await res.json();
+
+    location.href = "/giver";
   };
 
   return (
@@ -123,6 +131,7 @@ export default function Write() {
                   ref={editorRef}
                   className={styles.editor}
                   contentEditable="true"
+                  data-placeholder="글을 작성해주세요"
                 />
               </div>
 

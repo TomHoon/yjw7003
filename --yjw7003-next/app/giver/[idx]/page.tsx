@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { useParams } from "next/navigation";
+import styles from "@/styles/Detail.module.scss";
 
 interface Params {
   params: { idx: string };
@@ -16,7 +17,9 @@ export default function GiverDetail() {
 
   useEffect(() => {
     const fetchApi = async () => {
-      const res = await fetch(`https://tomhoon.my/api/v1/board/detail/${idx}`);
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/v1/board/detail/${idx}`
+      );
       const response = await res.json();
 
       console.log(response);
@@ -35,7 +38,7 @@ export default function GiverDetail() {
       <div className="auto">
         <div className="right-content">
           <div className="right-top">
-            <h3>후원 및 기부</h3>
+            <h3 className={styles.title}>후원 및 기부</h3>
           </div>
 
           <article className="right-bottom">
@@ -56,19 +59,22 @@ export default function GiverDetail() {
 
             <div className="info-content-container">
               <div className="auto">
-                <div className="info-content" ref={contentRef}>
+                <div
+                  className={`info-content ${styles.content}`}
+                  ref={contentRef}
+                >
                   <div className="giver-list-table"></div>
                 </div>
 
-                <div className="info-content-footer">
-                  <ul>
-                    <li>첨부파일</li>
-                    {info.fileUploadList &&
-                      info.fileUploadList.map((item: any, idx: number) => {
+                {info.fileUploadList?.length > 0 && (
+                  <div className="info-content-footer">
+                    <ul>
+                      <li>첨부파일</li>
+                      {info.fileUploadList.map((item: any, idx: number) => {
                         return (
                           <li key={idx}>
                             <a
-                              href={`https://tomhoon.my/${item.filePath}`}
+                              href={`${process.env.NEXT_PUBLIC_API_URL}/${item.filePath}`}
                               target="_blank"
                               download={item}
                             >
@@ -77,8 +83,9 @@ export default function GiverDetail() {
                           </li>
                         );
                       })}
-                  </ul>
-                </div>
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
           </article>

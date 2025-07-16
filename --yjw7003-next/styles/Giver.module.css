@@ -43,3 +43,7 @@
     }
   }
 }
+
+.title {
+  display: inline-block;
+}

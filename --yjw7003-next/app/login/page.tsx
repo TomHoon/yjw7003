@@ -11,7 +11,7 @@ export default function Login() {
   const goLogin = () => {
     console.log("loginInfo >>> ", loginInfo);
 
-    fetch("https://tomhoon.my/api/v1/member/login", {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/member/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

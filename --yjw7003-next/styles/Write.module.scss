@@ -17,9 +17,7 @@
     &:focus {
       box-shadow: none;
     }
-
   }
-
 }
 
 .fileIcons {
@@ -45,6 +43,15 @@
 .editor {
   min-height: 500px;
   padding: 15px 0;
+
+  &:empty {
+    &::before {
+      content: attr(data-placeholder);
+      color: gray;
+      pointer-events: none;
+      user-select: none;
+    }
+  }
 
   &:focus {
     border: none;
