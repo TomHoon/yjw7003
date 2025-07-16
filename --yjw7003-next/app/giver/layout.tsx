@@ -1,5 +1,6 @@
 import SubBanner from "@/components/SubBanner";
 import React from "react";
+import { Suspense } from "react";
 
 export default function BoardLayout({
   children,
@@ -8,8 +9,10 @@ export default function BoardLayout({
 }) {
   return (
     <>
-      <SubBanner title="후원 및 기부" />
-      {children}
+      <Suspense>
+        <SubBanner title="후원 및 기부" />
+        {children}
+      </Suspense>
     </>
   );
 }
