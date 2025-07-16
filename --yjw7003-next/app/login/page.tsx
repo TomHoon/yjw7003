@@ -9,8 +9,6 @@ export default function Login() {
   const router = useRouter();
 
   const goLogin = () => {
-    console.log("loginInfo >>> ", loginInfo);
-
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/member/login`, {
       method: "POST",
       headers: {
@@ -23,6 +21,8 @@ export default function Login() {
         if (res) {
           localStorage.setItem("memberId", loginInfo.memberId);
           location.href = "/";
+        } else {
+          alert("로그인이 실패하였습니다");
         }
       });
   };
