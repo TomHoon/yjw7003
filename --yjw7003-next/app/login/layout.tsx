@@ -1,7 +1,11 @@
-import SubBanner from '@/components/SubBanner';
-import React from 'react';
+import SubBanner from "@/components/SubBanner";
+import React from "react";
 
-export default function BoardLayout({ children }: { children: React.ReactNode }) {
+export default function BoardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <>
       <SubBanner title="회원 서비스" />

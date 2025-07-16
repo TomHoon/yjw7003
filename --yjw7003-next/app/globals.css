@@ -2,58 +2,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@300;400;500&display=swap');
 
 body {
-  padding: 0;
-  margin: 0;
-  font-family: "Noto Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: "Noto Sans", sans-serif;
 }
-ul, li {
-  margin: 0;
-  padding: 0;
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
 }
+
 ul li {
-  list-style: none;
-  cursor: pointer;
+    list-style: none;
+    cursor: pointer;
 }
+
 .auto {
-  width: 1200px;
-  margin: 0 auto;
+    width: 1200px;
+    margin: 0 auto;
 }
+
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 header {
     position: fixed;
-    z-index:99999999;
+    z-index: 99999999;
     border-bottom: 1px solid #ddd;
     background: #fff;
     width: 100%;
-    top:0;
+    top: 0;
 }
+
 a {
     text-decoration: none;
-    color: inherit; /* optional, keeps link color same as text */
-  }
+    color: inherit;
+    /* optional, keeps link color same as text */
+}
+
 .logo {
     width: 285px;
     height: 45px;
 }
 
-.flex-container a{
+.flex-container a {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
 }
+
 .flex-container {
     display: flex;
     justify-content: space-between;
 }
 
-.flex-container ul li{
+.flex-container ul li {
     font-size: 18px;
     font-weight: 500;
 }
+
 .flex-container ul {
     display: flex;
     justify-content: center;
@@ -76,7 +86,8 @@ a {
     padding: 15px 0;
     background-color: #f7f7f2;
 }
-.mainCarousel img{ 
+
+.mainCarousel img {
     width: 1200px;
 }
 
@@ -191,11 +202,13 @@ a {
     display: flex;
     justify-content: space-between;
 }
+
 .welfare-ask {
     background-color: #806d57;
     padding: 10px;
     border-radius: 10px;
 }
+
 .welfare-ask ul {
     display: flex;
     flex-direction: column;
@@ -230,7 +243,8 @@ a {
     justify-content: center;
     align-items: center;
 }
-.sub-banner span{ 
+
+.sub-banner span {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -240,7 +254,8 @@ a {
     border-bottom: 5px solid #fff;
     transform: translate(-50%, -50%);
 }
-.sub-banner img{
+
+.sub-banner img {
     width: 100%;
     max-width: 2000px;
     margin: 0 auto;
@@ -253,7 +268,7 @@ a {
     padding: 10px;
 }
 
-.right-top h3{
+.right-top h3 {
     font-size: 38px;
     font-weight: 500;
     padding-bottom: 30px;
@@ -263,11 +278,13 @@ a {
 article {
     border-top: 2px solid #46a51d
 }
-.right-bottom-title ul{
+
+.right-bottom-title ul {
     display: flex;
     border-bottom: 1px solid #ddd;
 }
-.right-bottom-title ul li{
+
+.right-bottom-title ul li {
     font-size: 15px;
     font-weight: 500;
     text-align: center;
@@ -277,23 +294,28 @@ article {
 .right-bottom-item {
     border-bottom: 1px solid #ddd;
 }
-.right-bottom-item ul{
+
+.right-bottom-item ul {
     display: flex;
 }
-.right-bottom-item ul li{
+
+.right-bottom-item ul li {
     text-align: center;
     padding: 10px;
 }
-.right-bottom-item ul li:nth-child(1){
+
+.right-bottom-item ul li:nth-child(1) {
     width: 20%;
 }
-.right-bottom-item ul li:nth-child(2){
-    text-align: left !important;
+
+.right-bottom-item ul li:nth-child(2) {
+    text-align: left;
     width: 50%;
     color: #555;
     font-weight: 500;
 }
-.right-bottom-item ul li:nth-child(3){
+
+.right-bottom-item ul li:nth-child(3) {
     width: 20%;
 }
 
@@ -304,7 +326,8 @@ article {
 .info-container {
     border-bottom: 1px solid #ddd;
 }
-.info-container h3{
+
+.info-container h3 {
     font-size: 24px;
     font-weight: 400;
 }
@@ -312,17 +335,20 @@ article {
 .sub-info dl {
     display: flex;
 }
+
 .sub-info dt {
     font-weight: 700;
 }
-.sub-info dd{
+
+.sub-info dd {
     color: #888;
     margin-right: 50px;
 }
 
-.info-content-container .info-content{
+.info-content-container .info-content {
     min-height: 500px;
 }
+
 .info-content-footer {
     margin-top: 30px;
     background-color: #f9f9f9;
@@ -341,25 +367,36 @@ article {
 
 .giver-list-table {
     margin-top: 30px;
-    border-bottom:1px solid #329141;
+    border-bottom: 1px solid #329141;
 }
+
 .giver-list-title {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background-color: #329141;
     color: white;
 }
-.giver-list-title ul li, .giver-list-item ul li{
+
+.giver-list-title ul li,
+.giver-list-item ul li {
     width: 20%;
 }
-.giver-list-item ul{
+
+.giver-list-item ul {
     padding-bottom: 20px;
     border-bottom: 1px solid #ddd;
 }
 
-.giver-list-title ul, .giver-list-item ul {
+.giver-list-title ul,
+.giver-list-item ul {
     display: flex;
     justify-content: space-around;
     padding: 20px;
     text-align: center;
+}
+
+.editorImage {
+    width: 35rem;
+    display: block;
+    margin: 0 auto;
 }

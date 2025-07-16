@@ -1,8 +1,32 @@
-'use client';
+"use client";
 
-import LoginStyles from '@/styles/Login.module.css';
+import LoginStyles from "@/styles/Login.module.css";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
+  const [loginInfo, setLoginInfo] = useState({ memberId: "", memberPw: "" });
+  const router = useRouter();
+
+  const goLogin = () => {
+    console.log("loginInfo >>> ", loginInfo);
+
+    fetch("http://192.168.0.10:33000/api/v1/member/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(loginInfo),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        if (res) {
+          localStorage.setItem("memberId", loginInfo.memberId);
+          location.href = "/";
+        }
+      });
+  };
+
   return (
     <>
       <div className="auto">
@@ -12,17 +36,32 @@ export default function Login() {
           <div className={LoginStyles.loginForm}>
             <dl>
               <dt>회원 로그인 </dt>
-              <dd>양주시여성장애인어울림센터, 사회의 따뜻함을 전하는 복지를 하겠습니다.</dd>
+              <dd>
+                양주시여성장애인어울림센터, 사회의 따뜻함을 전하는 복지를
+                하겠습니다.
+              </dd>
             </dl>
 
-            <div className={`${LoginStyles.flexContainer} ${LoginStyles.flexLeft}`}>
+            <div
+              className={`${LoginStyles.flexContainer} ${LoginStyles.flexLeft}`}
+            >
               <div className={LoginStyles.flexItem}>
-                <input type="text" />
-                <input type="password" />
+                <input
+                  type="text"
+                  onChange={(e) =>
+                    setLoginInfo({ ...loginInfo, memberId: e.target.value })
+                  }
+                />
+                <input
+                  type="password"
+                  onChange={(e) =>
+                    setLoginInfo({ ...loginInfo, memberPw: e.target.value })
+                  }
+                />
               </div>
 
               <div className={LoginStyles.flexItem}>
-                <button>로그인</button>
+                <button onClick={goLogin}>로그인</button>
               </div>
             </div>
 

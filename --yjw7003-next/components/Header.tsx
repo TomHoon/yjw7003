@@ -1,7 +1,26 @@
-import Image from 'next/image';
-import Link from 'next/link';
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+  const [isLogged, setIsLogged] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    const id = localStorage.getItem("memberId");
+    if (id) {
+      setIsLogged(true);
+    }
+  }, []);
+
+  const logout = () => {
+    localStorage.removeItem("memberId");
+    location.href = "/";
+  };
+
   return (
     <header>
       <div className="auto">
@@ -19,8 +38,17 @@ export default function Header() {
             <li>복지관 소개</li>
           </ul>
           <div className="userBtns">
-            <button>로그인</button>
-            <button>회원가입</button>
+            {isLogged ? (
+              <button onClick={logout}>로그아웃</button>
+            ) : (
+              <>
+                <button>
+                  <Link href="/login">로그인</Link>
+                </button>
+                <button>회원가입</button>
+              </>
+            )}
+            
           </div>
         </div>
       </div>
