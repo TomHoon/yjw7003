@@ -1,8 +1,7 @@
-'use client';
+"use client";
 
 import { useEffect, useState, useRef } from "react";
-import { useParams } from 'next/navigation';
-
+import { useParams } from "next/navigation";
 
 interface Params {
   params: { idx: string };
@@ -11,26 +10,25 @@ interface Params {
 export default function GiverDetail() {
   const params = useParams();
   const idx = params?.idx as string;
-  
+
   const [info, setInfo] = useState<any>({});
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const fetchApi = async () => {
-      const res = await fetch(`http://192.168.0.10:33000/api/v1/board/detail/${idx}`);
+      const res = await fetch(`https://tomhoon.my/api/v1/board/detail/${idx}`);
       const response = await res.json();
 
       console.log(response);
-      setInfo({...response.data});
+      setInfo({ ...response.data });
 
       if (contentRef?.current) {
-        contentRef.current.innerHTML = response?.data?.content || '통신오류';
+        contentRef.current.innerHTML = response?.data?.content || "통신오류";
       }
-    }
+    };
 
     fetchApi();
   }, []);
-  
 
   return (
     <div className="giver-content">
@@ -51,7 +49,7 @@ export default function GiverDetail() {
                   <dd>관리자</dd>
 
                   <dt>등록일</dt>
-                  <dd>{info?.createdAt?.split('T')[0]}</dd>
+                  <dd>{info?.createdAt?.split("T")[0]}</dd>
                 </dl>
               </div>
             </div>
@@ -65,22 +63,20 @@ export default function GiverDetail() {
                 <div className="info-content-footer">
                   <ul>
                     <li>첨부파일</li>
-                    {
-                      info.fileUploadList && info.fileUploadList.map((item: any, idx: number) => {
+                    {info.fileUploadList &&
+                      info.fileUploadList.map((item: any, idx: number) => {
                         return (
                           <li key={idx}>
                             <a
-                              href={`http://192.168.0.10:33000/${item.filePath}`}
+                              href={`https://tomhoon.my/${item.filePath}`}
                               target="_blank"
                               download={item}
                             >
                               {item?.fileName}
                             </a>
                           </li>
-                        )
-                      })
-                    }
- 
+                        );
+                      })}
                   </ul>
                 </div>
               </div>
