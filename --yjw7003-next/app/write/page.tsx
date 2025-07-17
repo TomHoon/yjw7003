@@ -1,3 +1,4 @@
+
 "use client";
 
 import styles from "@/styles/Write.module.scss";
@@ -191,6 +192,7 @@ export default function Write() {
           <button onClick={goWrite}>등록</button>
         </div>
       </div>
+
     </>
   );
 }

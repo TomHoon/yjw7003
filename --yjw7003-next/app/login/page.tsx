@@ -1,3 +1,4 @@
+
 "use client";
 
 import LoginStyles from "@/styles/Login.module.css";
@@ -25,6 +26,7 @@ export default function Login() {
           alert("로그인이 실패하였습니다");
         }
       });
+
   };
 
   return (
@@ -36,6 +38,7 @@ export default function Login() {
           <div className={LoginStyles.loginForm}>
             <dl>
               <dt>회원 로그인 </dt>
+
               <dd>
                 양주시여성장애인어울림센터, 사회의 따뜻함을 전하는 복지를
                 하겠습니다.
@@ -57,6 +60,7 @@ export default function Login() {
                   onChange={(e) =>
                     setLoginInfo({ ...loginInfo, memberPw: e.target.value })
                   }
+
                 />
               </div>
 

@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -21,6 +22,7 @@ export default function Header() {
     location.href = "/";
   };
 
+
   return (
     <header>
       <div className="auto">
@@ -38,6 +40,7 @@ export default function Header() {
             <li>복지관 소개</li>
           </ul>
           <div className="userBtns">
+
             {isLogged ? (
               <button onClick={logout}>로그아웃</button>
             ) : (
@@ -49,6 +52,7 @@ export default function Header() {
               </>
             )}
             
+
           </div>
         </div>
       </div>
