@@ -33,6 +33,21 @@ export default function GiverDetail() {
     fetchApi();
   }, []);
 
+  const showAttached = (item:any) => {
+
+    let filePath = item.filePath.replace('uploads/', '');
+
+    const needEncoding = /[^a-zA-Z0-9_.\-\uAC00-\uD7A3]/.test(filePath);
+    
+
+    if (needEncoding) {
+      filePath = encodeURIComponent(filePath);
+    }
+
+    const url = `${process.env.NEXT_PUBLIC_API_URL}/uploads/${filePath}`
+    location.href = url;
+  }
+
   return (
     <div className="giver-content">
       <div className="auto">
@@ -73,13 +88,19 @@ export default function GiverDetail() {
                       {info.fileUploadList.map((item: any, idx: number) => {
                         return (
                           <li key={idx}>
-                            <a
+                            {/* <a
                               href={`${process.env.NEXT_PUBLIC_API_URL}/${item.filePath}`}
                               target="_blank"
                               download={item}
                             >
                               {item?.fileName}
-                            </a>
+                            </a> */}
+                            <button
+                              className={styles.attachedButton}
+                              onClick={() => showAttached(item)}
+                            >
+                              {item?.fileName.replace('uploads/', '')}
+                            </button>
                           </li>
                         );
                       })}
