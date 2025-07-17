@@ -1,0 +1,49 @@
+.writeBtnWrapper {
+  display: flex;
+  justify-content: right;
+  padding: 80px 80px 0 0;
+}
+
+.writeBtn {
+  width: 150px;
+  height: 70px;
+  border: none;
+  background: #329141;
+  border-radius: 10px;
+  color: white;
+  position: absolute;
+  right: 0px;
+  margin-top: 30px;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.title {
+  text-align: center !important;
+}
+
+.pageArea {
+  display: flex;
+  justify-content: center;
+
+  ul {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+    li {
+      flex: 1;
+      text-align: center;
+      max-width: 50px;
+    }
+  }
+}
+
+.title {
+  display: inline-block;
+}

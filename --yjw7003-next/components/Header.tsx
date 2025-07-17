@@ -1,13 +1,27 @@
-'use client';
 
-import { useAuth } from '@/app/auth-context';
-import Image from 'next/image';
-import Link from 'next/link';
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
-  const { isLoggedIn, login, logout } = useAuth();
+  const [isLogged, setIsLogged] = useState(false);
+  const router = useRouter();
 
-  console.log('isLoggedIn >>> ', isLoggedIn);
+  useEffect(() => {
+    const id = localStorage.getItem("memberId");
+    if (id) {
+      setIsLogged(true);
+    }
+  }, []);
+
+  const logout = () => {
+    localStorage.removeItem("memberId");
+    location.href = "/";
+  };
+
 
   return (
     <header>
@@ -26,10 +40,19 @@ export default function Header() {
             <li>복지관 소개</li>
           </ul>
           <div className="userBtns">
-            <Link href="/login">
-              <button>{isLoggedIn ? '로그아웃' : '로그인'}</button>
-            </Link>
-            {!isLoggedIn && <button>회원가입</button>}
+
+            {isLogged ? (
+              <button onClick={logout}>로그아웃</button>
+            ) : (
+              <>
+                <button>
+                  <Link href="/login">로그인</Link>
+                </button>
+                <button>회원가입</button>
+              </>
+            )}
+            
+
           </div>
         </div>
       </div>
