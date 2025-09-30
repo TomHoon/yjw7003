@@ -1,0 +1,62 @@
+.main {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #329141;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  border-radius: 6px;
+
+  input,
+  select {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+}
+
+.icon {
+  color: #329141;
+  width: 20px;
+  height: 20px;
+}
+
+.submitBtn {
+  background: #329141;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #287a34;
+  }
+}

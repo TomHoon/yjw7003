@@ -1,0 +1,45 @@
+.main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Noto Sans KR", sans-serif;
+  color: #333;
+}
+
+.title {
+  font-size: 2rem;
+  color: #329141;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 40px;
+
+  h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #329141;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+      padding-left: 1.5em;
+      position: relative;
+
+      &::before {
+        content: "✔";
+        position: absolute;
+        left: 0;
+        color: #329141;
+      }
+    }
+  }
+}

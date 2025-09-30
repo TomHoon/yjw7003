@@ -1,0 +1,52 @@
+.main {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f9f9f9;
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #333;
+  padding: 20px;
+}
+
+.iconWrapper {
+  background: #eaf5ee;
+  border-radius: 50%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  color: #329141;
+}
+
+.title {
+  font-size: 2rem;
+  color: #329141;
+  margin-bottom: 15px;
+}
+
+.message {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.infoIcon {
+  width: 20px;
+  height: 20px;
+  color: #329141;
+}

@@ -23,3 +23,19 @@
   font-size: 15px;
   color: #6d6d6d;
 }
+@media (max-width: 768px) {
+  .footerContainer {
+    flex-direction: column;
+    padding: 0 10px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .footerContainer {
+    align-items: center;
+  }
+  .footerLeft img {
+    width: 425px;
+  }
+}
