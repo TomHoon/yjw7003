@@ -8,25 +8,33 @@ export default function Location() {
   const mapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && window.naver && mapRef.current) {
-      // 지도 초기화
+    const initMap = () => {
+      if (!mapRef.current || !window.naver?.maps) return;
+
       const map = new window.naver.maps.Map(mapRef.current, {
-        center: new window.naver.maps.LatLng(37.791801, 127.0803647), // 초기 위도, 경도 (예: 양주시청 근처)
+        center: new window.naver.maps.LatLng(37.791801, 127.0803647),
         zoom: 16,
       });
 
-      new naver.maps.Marker({
-        position: new naver.maps.LatLng(37.791801, 127.0803647),
-        map: map, // 중요: map 속성 지정해야 표시됨
+      new window.naver.maps.Marker({
+        position: new window.naver.maps.LatLng(37.791801, 127.0803647),
+        map,
       });
+    };
+
+    if (window.naver?.maps) {
+      initMap();
+    } else {
+      window.addEventListener("naver-map-loaded", initMap);
+      return () => window.removeEventListener("naver-map-loaded", initMap);
     }
   }, []);
+
   return (
     <main className={styles.main}>
       <h2 className={styles.title}>오시는 길</h2>
 
       <section className={styles.mapSection}>
-        {/* 지도 이미지 또는 iframe (예: 카카오맵, 네이버 지도, 구글 지도) */}
         <div
           id="map"
           ref={mapRef}
