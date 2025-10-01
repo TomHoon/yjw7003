@@ -1,0 +1,55 @@
+.main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Noto Sans KR", sans-serif;
+  color: #333;
+}
+
+.title {
+  font-size: 2rem;
+  color: #329141;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.mapSection {
+  margin-bottom: 40px;
+
+  iframe {
+    border-radius: 8px;
+  }
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+
+  h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    color: #329141;
+  }
+
+  p {
+    margin: 3px 0;
+  }
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  color: #329141;
+  flex-shrink: 0;
+  margin-top: 4px;
+}

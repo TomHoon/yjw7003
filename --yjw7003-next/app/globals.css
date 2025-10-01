@@ -223,6 +223,7 @@ a {
   margin-top: 100px;
   background-color: #ccc;
   padding: 25px 0;
+  width: 100%;
 }
 
 .terms-container .auto ul {
@@ -390,4 +391,132 @@ article {
   width: 35rem;
   display: block;
   margin: 0 auto;
+}
+
+.hamburger {
+  display: none;
+}
+.dim {
+  display: none;
+}
+.side-menu {
+  position: absolute;
+  right: -100%;
+}
+@media (max-width: 768px) {
+  header,
+  .auto {
+    max-width: 768px;
+  }
+  .flex-container {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .mainCarousel .auto img {
+    width: 768px;
+  }
+  .flex-container ul,
+  .userBtns {
+    display: none;
+  }
+  .menu {
+    position: relative;
+    height: 50px;
+    flex: 1;
+    z-index: 200;
+  }
+  .hamburger {
+    position: absolute;
+    width: 25px;
+    right: 10px;
+    height: 2px;
+    background-color: #333;
+    display: block;
+    top: 29px;
+    font-size: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  .hamburger.active {
+    background: none;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background: #333;
+  }
+  .hamburger::before {
+    top: -10px;
+    transition: all 0.2s ease-in-out;
+  }
+  .hamburger.active:before {
+    transform: rotate(45deg);
+    transform-origin: top left; /* changes anchor point */
+  }
+  .hamburger::after {
+    top: 10px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .hamburger.active::after {
+    transform-origin: top left; /* changes anchor point */
+    transform: rotate(-45deg) translateY(-2px);
+  }
+  .dim {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    width: 100%;
+  }
+  .side-menu {
+    position: absolute;
+    right: -100%;
+    height: 100vh;
+    background: #fff;
+    z-index: 100;
+    width: 300px;
+    transition: all 0.2s ease-in-out;
+  }
+  .side-menu.active {
+    right: 0;
+  }
+
+  .main-giver .auto-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .main-giver .auto-flex .giver-left-wrapper {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 425px) {
+  header,
+  .auto {
+    max-width: 425px;
+  }
+
+  .mainCarousel .auto img {
+    margin-top: 30px;
+    width: 425px;
+  }
+  .mainNavi .auto ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .mainNavi .auto ul li {
+    flex: 0 0 50%; /* each takes 50% width */
+  }
+  .terms-container .auto ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0 20px;
+  }
 }

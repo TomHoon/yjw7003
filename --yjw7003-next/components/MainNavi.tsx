@@ -1,21 +1,28 @@
-import Image from 'next/image';
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import Modal from "@/components/Modal";
+import { useState } from "react";
 
 export default function MainNavi() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="mainNavi">
       <div className="auto">
         <ul>
           <li>
-            <a href="">
-              <img src="/images/guide.png" alt="" />
-              <span>이용안내</span>
-            </a>
+            <Link href="/business">
+              <img src="/images/사업안내.png" alt="" />
+              사업안내
+            </Link>
           </li>
           <li>
-            <a href="">
-              <img src="/images/사업안내.png" alt="" />
-              <span>사업안내</span>
-            </a>
+            <Link href="/location">
+              <img src="/images/guide.png" alt="" />
+              오시는길
+            </Link>
           </li>
           <li>
             <a href="">
@@ -37,6 +44,11 @@ export default function MainNavi() {
           </li>
         </ul>
       </div>
+
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <h2>안내</h2>
+        <p>이곳에 모달 내용을 넣으세요.</p>
+      </Modal>
     </div>
   );
 }

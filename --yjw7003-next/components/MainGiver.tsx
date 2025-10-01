@@ -529,15 +529,19 @@ export default function MainGiver() {
             <div className="welfare-ask">
               <ul>
                 <li>
-                  <span style={{ color: '#fff' }}>복지관문의</span>
+                  <span style={{ color: "#fff" }}>복지관문의</span>
                 </li>
                 <li>
                   <img src="./전화기.png" alt="" />
-                  <span style={{ color: '#fff260', fontWeight: '700' }}>031-846-7003</span>
+                  <span style={{ color: "#fff260", fontWeight: "700" }}>
+                    031-846-7003
+                  </span>
                 </li>
                 <li>
                   <i className="bx bx-time-five"></i>
-                  <span style={{ color: '#fff' }}>09:00 ~ 18:00 (주말, 공휴일 제외)</span>
+                  <span style={{ color: "#fff" }}>
+                    09:00 ~ 18:00 (주말, 공휴일 제외)
+                  </span>
                 </li>
               </ul>
             </div>
