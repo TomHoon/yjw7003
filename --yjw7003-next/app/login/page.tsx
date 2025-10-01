@@ -1,32 +1,33 @@
+'use client';
 
-"use client";
-
-import LoginStyles from "@/styles/Login.module.css";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import LoginStyles from '@/styles/Login.module.css';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Login() {
-  const [loginInfo, setLoginInfo] = useState({ memberId: "", memberPw: "" });
+  const [loginInfo, setLoginInfo] = useState({ memberId: '', memberPw: '' });
   const router = useRouter();
 
-  const goLogin = () => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/member/login`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(loginInfo),
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        if (res) {
-          localStorage.setItem("memberId", loginInfo.memberId);
-          location.href = "/";
-        } else {
-          alert("로그인이 실패하였습니다");
-        }
-      });
+  const goLogin = async () => {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/v1/member/login`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(loginInfo),
+      }
+    );
 
+    const result = await res.json();
+
+    if (res.status >= 400) {
+      alert(result?.message || '에러발생');
+    } else {
+      localStorage.setItem('memberId', loginInfo.memberId);
+      location.href = '/';
+    }
   };
 
   return (
@@ -60,7 +61,6 @@ export default function Login() {
                   onChange={(e) =>
                     setLoginInfo({ ...loginInfo, memberPw: e.target.value })
                   }
-
                 />
               </div>
 

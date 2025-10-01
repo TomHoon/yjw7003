@@ -1,10 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@300;400;500&display=swap');
 
 body {
   padding: 0;
   margin: 0;
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: transparent;
 }
 
 ul,
@@ -317,7 +323,17 @@ article {
 
 /** giver-detail */
 .info-container {
+  position: relative;
   border-bottom: 1px solid #ddd;
+}
+.info-container .giver-del-btn {
+  background-color: #329141;
+  padding: 10px 20px;
+  position: absolute;
+  right: 10px;
+  top: -10px;
+  color: #fff;
+  border-radius: 5px;
 }
 
 .info-container h3 {
@@ -406,7 +422,7 @@ article {
 @media (max-width: 768px) {
   header,
   .auto {
-    max-width: 768px;
+    width: 100vw;
   }
   .flex-container {
     display: flex;
@@ -414,9 +430,9 @@ article {
     position: relative;
   }
   .mainCarousel .auto img {
-    width: 768px;
+    width: 100%;
   }
-  .flex-container ul,
+  .flex-container .gnb,
   .userBtns {
     display: none;
   }
@@ -426,46 +442,7 @@ article {
     flex: 1;
     z-index: 200;
   }
-  .hamburger {
-    position: absolute;
-    width: 25px;
-    right: 10px;
-    height: 2px;
-    background-color: #333;
-    display: block;
-    top: 29px;
-    font-size: 0;
-    transition: all 0.2s ease-in-out;
-  }
-  .hamburger.active {
-    background: none;
-  }
 
-  .hamburger::before,
-  .hamburger::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 2px;
-    background: #333;
-  }
-  .hamburger::before {
-    top: -10px;
-    transition: all 0.2s ease-in-out;
-  }
-  .hamburger.active:before {
-    transform: rotate(45deg);
-    transform-origin: top left; /* changes anchor point */
-  }
-  .hamburger::after {
-    top: 10px;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .hamburger.active::after {
-    transform-origin: top left; /* changes anchor point */
-    transform: rotate(-45deg) translateY(-2px);
-  }
   .dim {
     position: absolute;
     display: block;
@@ -495,6 +472,26 @@ article {
   .main-giver .auto-flex .giver-left-wrapper {
     margin: 0 auto;
   }
+  .giver-right-wrapper {
+    width: calc(100vw - 30px);
+    margin: 0 auto;
+  }
+  .terms-container .auto ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0 20px;
+  }
+  .right-bottom {
+    width: calc(100vw - 30px);
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  .right-top {
+    width: calc(100vw - 30px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 425px) {
@@ -513,10 +510,5 @@ article {
   }
   .mainNavi .auto ul li {
     flex: 0 0 50%; /* each takes 50% width */
-  }
-  .terms-container .auto ul {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: 0 20px;
   }
 }

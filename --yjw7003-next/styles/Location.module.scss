@@ -53,3 +53,9 @@
   flex-shrink: 0;
   margin-top: 4px;
 }
+
+@media (max-width: 768px) {
+  .main { 
+    width: calc(100vw - 90px);
+  }
+}

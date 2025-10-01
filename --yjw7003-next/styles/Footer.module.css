@@ -24,6 +24,9 @@
   color: #6d6d6d;
 }
 @media (max-width: 768px) {
+  .footerLeft img {
+    width: calc(100vw - 30px);
+  }
   .footerContainer {
     flex-direction: column;
     padding: 0 10px;

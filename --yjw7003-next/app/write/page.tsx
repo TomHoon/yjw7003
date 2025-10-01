@@ -70,7 +70,9 @@ export default function Write() {
 
     const formData = new FormData();
     const jsonStr = JSON.stringify(info);
-    formData.append("board", new Blob([jsonStr], { type: "application/json" }));
+
+    formData.append("writer", info.writer);
+    formData.append("board", new Blob([jsonStr], { type: "application/json" })); 
 
     업로드파일리스트.forEach((item: string | Blob | any) => {
       formData.append("attachList", item);
@@ -86,7 +88,12 @@ export default function Write() {
 
     const response = await res.json();
 
-    location.href = "/giver";
+    if (res?.status != 400) {
+      location.href = "/giver";
+    } else {
+      console.error('error 발생 ! ❌ ', res);
+    }
+
   };
 
   return (
